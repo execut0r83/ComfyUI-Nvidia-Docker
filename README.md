@@ -191,17 +191,6 @@ By pulling and using the container, you accept the terms and conditions of this 
 https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
 ```
 
-# 4. Screenshots
-
-## 4.1. First run: Bottle image
-
-![First Run](assets/FirstRun.png)
-
-## 4.2. FLUX.1[dev] example
-
-Template at [Flux example](https://comfyanonymous.github.io/ComfyUI_examples/flux/)
-
-![Flux Dev example](assets/Flux1Dev-run.png)
 
 # 5. FAQ
 
@@ -313,22 +302,8 @@ To do this:
 To use `cm-cli`, from the virtualenv, use: `python3 /comfy/mnt/custom_nodes/ComfyUI-Manager/cm-cli.py`.
 For example: `python3 /comfy/mnt/custom_nodes/ComfyUI-Manager/cm-cli.py show installed` (`COMFYUI_PATH=/ComfyUI` should be set)
 
-## 5.5. Additional FAQ
-
-See [extras/FAQ.md] for additional FAQ topics, among which:
-- Updating ComfyUI
-- Updating ComfyUI-Manager
-- Installating a custom node from git
-
 # 6. Troubleshooting
 
 The `venv` in the "run" directory is where all the required python packages used by the tool are placed.
 In case of issue, it is recommended to terminate the container, delete that `venv` directory, then restart the container. 
 The virtual environment will be recreated and any `custom_scripts` should re-install their own requirements.
-
-# 7. Changelog
-
-- 20240915: Added `COMFY_CMDLINE_BASE` and `COMFY_CMDLINE_XTRA` variable
-- 20240824: Tag 0.2: shift to pull at first run-time, user upgradable with lighter base container
-- 20240824: Tag 0.1: builds were based on ComfyUI release, not user upgradable
-- 20240810: Initial Release
